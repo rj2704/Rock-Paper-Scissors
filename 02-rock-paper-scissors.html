@@ -28,10 +28,11 @@
 
   <script>
 
+    // Default operator----
     /* If left condition is true then It will use left side 
     If left condition is false then It will use right side (Alternative code is below)*/
-    const score = JSON.parse(localStorage.getItem
-    ('score')) || {
+    let score = JSON.parse(localStorage.getItem
+      ('score')) || {
       wins: 0,
       losses: 0,
       ties: 0
@@ -54,37 +55,37 @@
 
       if (playerMove === 'scissors') {
         if (computerMove === 'rock') {
-          result = 'You lose.';
+          result = 'You lose😭';
         } else if (computerMove === 'paper') {
-          result = 'You win.';
+          result = 'You win😀';
         } else if (computerMove === 'scissors') {
-          result = 'Tie.';
+          result = 'Tie😧';
         }
 
       } else if (playerMove === 'paper') {
         if (computerMove === 'rock') {
-          result = 'You win.';
+          result = 'You win😀';
         } else if (computerMove === 'paper') {
-          result = 'Tie.';
+          result = 'Tie😧';
         } else if (computerMove === 'scissors') {
-          result = 'You lose.';
+          result = 'You lose😭';
         }
 
       } else if (playerMove === 'rock') {
         if (computerMove === 'rock') {
-          result = 'Tie.';
+          result = 'Tie😧';
         } else if (computerMove === 'paper') {
-          result = 'You lose.';
+          result = 'You lose😭';
         } else if (computerMove === 'scissors') {
-          result = 'You win.';
+          result = 'You win😀';
         }
       }
 
-      if (result === 'You win.') {
+      if (result === 'You win😀') {
         score.wins += 1;
-      } else if (result === 'You lose.') {
+      } else if (result === 'You lose😭') {
         score.losses += 1;
-      } else if (result === 'Tie.') {
+      } else if (result === 'Tie😧') {
         score.ties += 1;
       }
 
